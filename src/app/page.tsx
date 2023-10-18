@@ -20,7 +20,7 @@ export default function Home() {
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
 
-    let newFlipResults = flipResults
+    let newFlipResults: { [key: string]: number } = initialFlipResults
     for (let i = 0; i < timesToFlip; i++) {
       const flipResult = sample(["heads", "tails"])
       newFlipResults = {
